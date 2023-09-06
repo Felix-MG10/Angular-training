@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row my-4" *ngFor="let section of sections; let even = even">
+    <div class="col-md-6 order-md-{{ even ? 2 : 1 }}">
+      <div class="text-center py-5">
+        <p>{{ section.body }}</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, commodi. Delectus ipsum corporis aperiam, velit at itaque esse excepturi voluptatem libero ut exercitationem odit autem dolorem earum molestias ipsam expedita ullam, eligendi distinctio eos nulla nihil dolorum accusantium sint! Nisi voluptas voluptates porro fugit molestiae nostrum iusto voluptatibus ut tenetur?</p>
+      </div>
+    </div>
+    <div class="col-md-6 order-md-{{ even ? 1 : 2 }}">
+      <div class="card">
+        <img [src]="section.image" class="card-img-top" [alt]="section.title">
+        <div class="card-body">
+          <h5 class="card-title">{{ section.title }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

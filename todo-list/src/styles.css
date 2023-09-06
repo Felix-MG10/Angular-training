@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+@import '~font-awesome/css/font-awesome.min.css';
+
+:root{
+  --text-color: #C08261;
+  --background-color: #E2C799;
+  --others-color: #E2C799;
+}
+
+
+body{
+  background-color: var(--background-color);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.btn-color{
+  background-color: var(--background-color);
+}

@@ -1,0 +1,30 @@
+
+<div class="container mt-4">
+  <a class="float-end btn btn-success btn-lg" routerLink="/list/add">add Task</a>
+  <h1 class="text-center">Liste des taches</h1>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let tache of taches">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title text-secondary">Détails de la tâche</h5>
+          <p class="card-text"><strong>Titre :</strong> {{ tache.titre }}</p>
+          <p class="card-text"><strong>État :</strong>
+            {{ tache.etat ? "Fini" : "En cours" }}
+            <button class="btn btn-color rounded-5" >
+              {{ tache.etat? "finish" : "Marquer" }}
+            </button>
+          </p>
+          <p class="card-text"><strong>Date limite :</strong> {{ tache.date }}</p>
+          <p class="card-text"><strong>Priorité :</strong> {{ tache.priorite }}</p>
+          <p class="card-text"><strong>Tags :</strong> {{ tache.tags }}</p>
+          <p class="card-text"><strong>Description :</strong> {{ tache.description }}</p>
+          <div class="btn-group d-flex justify-content-center" role="group" aria-label="Default button group">
+            <button type="button" class="btn btn-outline-warning btn-sm" (click)="handleUpdate(tache.id)">Update</button>
+            <button type="button" class="btn btn-outline-danger btn-sm " (click)="handleDelete(tache.id)">Delete</button>
+            <button type="button" class="btn btn-outline-info btn-sm " (click)="handleDetail(tache.id)">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
